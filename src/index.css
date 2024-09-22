@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.error {
+    @apply text-red-500; 
+}
+
+label {
+    margin-right: 0.5rem;
+}
+
+input[type=checkbox] {
+    margin-right: 0.2rem;
+}
+input[type=password] {
+    margin-right: 0.4rem;
+}
+
+input:not([type=checkbox]) {
+  background-color: rgb(233, 233, 233);
+  border-radius: 0.2rem;
+  padding: 0.05rem 0.5rem;
+}
+
+input:not([type=checkbox]):focus {
+  border: 1px solid #00bfff; 
+  outline: none;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .title::before,
+  .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #00bfff;
+  }
+
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
